@@ -98,7 +98,7 @@ let trumpeterArmDownLeft = drawing.append("line")
 /* this is the 
 trumpeter arm down right */
 let trumpeterArmDownRight = drawing.append("line")
-    .attr("x1", 120)//arm poistion horizontal up
+    .attr("x1", 115)//arm poistion horizontal up
     .attr("y1", 85)//arm poistion vertical up
     .attr("x2", 80)//arm position horizontal down
     .attr("y2", 95)//arm position vertical down
