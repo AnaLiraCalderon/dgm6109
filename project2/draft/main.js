@@ -109,25 +109,22 @@ function evaluateAnswers() {
 
 
  //This is for wallgrinds   
-  if (choice === 2) {
+    if (choice === 2) {
         storeName = "Wallgrinds";
+        isBusinessValid = true;
+        let errors = [];
 
-        if (amount < 5) {
-            output("Incorrect credit card information entered");
-            isBusinessValid = false;
+        if (amount <= 5 || amount >= 500) {
+        errors.push("Incorrect credit card information entered");
+        isBusinessValid = false;
         }
-
-        if (amount > 500) {
-            output("Incorrect credit card information entered");
-            isBusinessValid = false;
-        }
-
-        let remainder = amount % 5;
-        
-        if (remainder > 0) {
-            output("The Walgrinds card can only be purchased in increments of $5.00");
-            isBusinessValid = false;
-        }
+        if(amount % 5 !== 0){
+        errors.push("The Wallgrinds card can only be purchased in increments of $5");
+        isBusinessValid = false;
+         }
+        if (!isBusinessValid) {
+        errors.forEach(msg => output(msg));
+    }
     }
 //In this part, if the fields are filled out incorrectly, the incorrect text should be cleared and a message should appear explaining what went wrong.
 //Here, it should identify whether the input is a number or text and check if it has the correct .00 format.
