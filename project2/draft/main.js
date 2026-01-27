@@ -173,9 +173,9 @@ function evaluateAnswers() {
 
     let finalMsg = `Your gift card for ${storeName} in the amount of $${amount.toFixed(2)} will be shipped to your address in ZIP code ${zipCode}.`;
     
-    if (fee > 0) {
-        finalMsg = ` Please note that a processing fee of $${fee.toFixed(2)} has been added to your purchase.`;
-    }
+   if (fee > 0) {
+    finalMsg += ` Please note that a processing fee of $${fee.toFixed(2)} has been added to your purchase.`;
+}
 //This is the final message for all the stores
     output(finalMsg);
     output("Thanks!");
