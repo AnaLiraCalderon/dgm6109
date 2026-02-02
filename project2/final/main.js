@@ -209,3 +209,17 @@ function clear() {// THIS FUNCTION ACTS A RESTORATION TOOL
     document.getElementById("zip").value = "";//this clear the text boxes of the amount and the zip
     document.getElementById("output").innerHTML = "";//this deletes any previous success messages
 }
+<<<<<<< Updated upstream
+=======
+
+/* The test data to validate this system includes the following cases: 
+a Sepharoah purchase of $150.00 with ZIP 10001 to confirm success without 
+a fee on the East Coast; a Wallgrinds purchase of $50.00 with ZIP 33101 
+to validate the 5% service fee ($2.50); a Taco Hut purchase of $25.00 
+with ZIP 96705 to verify the California legal exemption; an amount of $2.00 
+at Wallgrinds to test the minimum value error (must be at least $5); ZIP "letter" 
+to validate the non-numeric character error; an amount of "10.5" to confirm the 
+system requires exactly two decimals; a Sepharoah purchase with ZIP 90210 
+to test the region restriction; and a $12.00 amount at Wallgrinds to 
+ensure values that are not multiples of $5 are rejected. */
+>>>>>>> Stashed changes
