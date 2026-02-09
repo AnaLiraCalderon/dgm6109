@@ -9,18 +9,24 @@ body {
 
 
 h1 {
-	font-size: 3rem;
-
+	font-size: 8rem;
+font-family: 'Times New Roman', Times, serif;
 	margin-bottom: 0;
 }
 
 h2 {
-	font-size: 2.25rem;
+	font-size: 3rem;
+	font-family: Arial, Helvetica, sans-serif;
 	margin-bottom: 0;
 }
 
 h3 {
-	font-size: 1.6rem;
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+h4 {
+	font-size: 1rem;
 	margin-bottom: 0;
 }
 
@@ -69,7 +75,7 @@ a:hover, a:focus {
 .nav-main-item {
 	display: inline-block;
 	color: white;
-	background-color: rgb(250,100,75);
+	background-color: rgb(92, 75, 250);
 	font-size: 1.5rem;
 	
 	padding: 0.5rem 0.75rem;
@@ -82,6 +88,26 @@ a:hover, a:focus {
 
 .nav-main-item:active, .nav-main-item:hover, .nav-main-item:focus {
 	color: white;
-	background-color: rgb(50,50,50);
+	background-color: rgb(192, 52, 52);
 }
+
+figure {
+  position: relative;
+}
+
+figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4); 
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+figure:hover::after {
+  opacity: 1;
+}
+
+
 
