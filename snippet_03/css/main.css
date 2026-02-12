@@ -1,0 +1,113 @@
+body {
+	
+	font-family: Helvetica, Verdana, sans-serif;
+
+	margin: 1rem;
+
+	font-size: 1.25rem;
+}
+
+
+h1 {
+	font-size: 8rem;
+font-family: 'Times New Roman', Times, serif;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 3rem;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 0;
+}
+
+h3 {
+	font-size: 2rem;
+	margin-bottom: 0;
+}
+
+h4 {
+	font-size: 1rem;
+	margin-bottom: 0;
+}
+
+
+p, ol, ul {
+	max-width: 40rem;
+}
+
+
+
+img {
+	height: auto; 
+
+	max-width: 100%;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: black; 
+}
+
+
+figure {
+	margin: 0;
+}
+
+figcaption {
+	font-style: italic;
+}
+
+
+
+a {
+
+	color: rgb(200,0,0);
+
+	transition-property: color;
+	transition-duration: 0.5s;
+}
+
+a:hover, a:focus {
+	color: rgb(50,0,0); 
+
+	text-decoration: none;
+}
+
+.nav-main-item {
+	display: inline-block;
+	color: white;
+	background-color: rgb(92, 75, 250);
+	font-size: 1.5rem;
+	
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;
+}
+
+
+.nav-main-item:active, .nav-main-item:hover, .nav-main-item:focus {
+	color: white;
+	background-color: rgb(192, 52, 52);
+}
+
+figure {
+  position: relative;
+}
+
+figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4); 
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+figure:hover::after {
+  opacity: 1;
+}
+
+
+
