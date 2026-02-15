@@ -12,7 +12,7 @@ let simsGamingObservations = [
     playedSims: false, // Boolean: True if I played that day, False if I not played in that day
     minutesPlayed: 0, // Number: Minutes spent playing The Sims4
     temperatureC: -1, // Number: Daily temperature in Celsius
-    timeOfDay: null, // String: Moment of the day (null if not played)
+    timeOfDay: "none", // String: Moment of the day 
     stressLevelBefore: 4, // Daily strees level Scale: 0 (relaxed) 1 (Calm) 2(Uneasy) 3(Tense) 4(Stressed) to 5 (very stressed)
     stressLevelAfter: 4
   }, // observation for January 24
@@ -21,7 +21,7 @@ let simsGamingObservations = [
     playedSims: false,
     minutesPlayed: 0,
     temperatureC: 5,
-    timeOfDay: null,
+    timeOfDay: "none",
     stressLevelBefore: 5,
     stressLevelAfter: 5
   }, // observation for January 25
@@ -39,7 +39,7 @@ let simsGamingObservations = [
     playedSims: false,
     minutesPlayed: 0,
     temperatureC: 5,
-    timeOfDay: null,
+    timeOfDay: "none",
     stressLevelBefore: 1,
     stressLevelAfter: 1
   }, // observation for January 27
@@ -114,7 +114,7 @@ let simsGamingObservations = [
     playedSims: false,
     minutesPlayed: 0,
     temperatureC: 16,
-    timeOfDay: null,
+    timeOfDay: "none",
     stressLevelBefore: 0,
     stressLevelAfter: 0
   }, // observation for February 4
@@ -186,7 +186,7 @@ let simsGamingObservations = [
     playedSims: false,
     minutesPlayed: 0,
     temperatureC: 8,
-    timeOfDay: null,
+    timeOfDay: "none",
     stressLevelBefore: 3,
     stressLevelAfter: 3
   }, // observation for February 12
@@ -198,9 +198,8 @@ let simsGamingObservations = [
     timeOfDay: "Afternoon",
     stressLevelBefore: 2,
     stressLevelAfter: 0
-  }, // observation for February 13
+  } // observation for February 13
 ];// list of daily gaming, temperature and stress observations
 
 //console.log(JSON.stringify(simsGamingObservations));
 showData(simsGamingObservations);
-
