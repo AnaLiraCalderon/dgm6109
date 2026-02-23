@@ -198,16 +198,16 @@ svg.append("text")
     .text("5");// Text 5
 
 
-//I add the leyends of the temperature
+//I add the legends of the temperature
 //----------------------------------
-//------------ leyends -------------
+//------------ legends -------------
 //----------------------------------
 
-let leyendTemp = svg.append("g")
+let legendTemp = svg.append("g")
     .attr("transform", "translate(620, 50)"); 
 
 //---------------Legend Title-------------------------------------
-leyendTemp.append("text")
+legendTemp.append("text")
     .attr("x", 150)
     .attr("y", 40)
     .style("font-weight", "bold")
@@ -215,56 +215,56 @@ leyendTemp.append("text")
     .text("Temperature (°C)");
 
 //---------------- Circle 1: Maximum (16°C)---------------------
-leyendTemp.append("circle")
+legendTemp.append("circle")
     .attr("r", rScale(16))
     .attr("cx", 170)
     .attr("cy", 70)
     .attr("fill", "none") 
     .attr("stroke", "black");
 
-leyendTemp.append("text")
+legendTemp.append("text")
     .attr("x", 200)
     .attr("y", 75)
     .style("font-size", "12px")
     .text("16°C (High)");
 
 //---------------- Circle 2: Medium-High (10°C)---------------------
-leyendTemp.append("circle")
+legendTemp.append("circle")
     .attr("r", rScale(10))
     .attr("cx", 170)
     .attr("cy", 110)
     .attr("fill", "none") 
     .attr("stroke", "black");
 
-leyendTemp.append("text")
+legendTemp.append("text")
     .attr("x", 200)
     .attr("y", 112)
     .style("font-size", "12px")
     .text("10°C");
 
 //---------------- Circle 3: Medium-Low (5°C)---------------------
-leyendTemp.append("circle")
+legendTemp.append("circle")
     .attr("r", rScale(5))
     .attr("cx", 170)
     .attr("cy", 140)
     .attr("fill", "none") 
     .attr("stroke", "black");
 
-leyendTemp.append("text")
+legendTemp.append("text")
     .attr("x", 200)
     .attr("y", 143)
     .style("font-size", "12px")
     .text("5°C");
 
 //---------------- Circle 4: Minimum (-1°C)---------------------
-leyendTemp.append("circle")
+legendTemp.append("circle")
     .attr("r", rScale(-1))
     .attr("cx", 170)
     .attr("cy", 165)
     .attr("fill", "none") 
     .attr("stroke", "black");
 
-leyendTemp.append("text")
+legendTemp.append("text")
     .attr("x", 200)
     .attr("y", 168)
     .style("font-size", "12px")
