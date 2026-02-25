@@ -76,20 +76,13 @@ let simsGamingObservations = [ /* Declares the variable of Sims4 and the stress 
     { date: "2026-02-20", minutesPlayed: 41, stressLevelAfter: 3, temperature: 4 },/* Date, minutesPlayed, stressLevel, temperature */ 
     { date: "2026-02-21", minutesPlayed: 35, stressLevelAfter: 0, temperature: 8 },/* Date, minutesPlayed, stressLevel, temperature */ 
 ];
-simsGamingObservations.sort(function(a, b) {
-    return d3.descending(a.temperature, b.temperature);
-});
-
 
 //-------------------------------------------------------------------
 //-------------------Create the scales-------------------------------
 //-------------------------------------------------------------------
 
-
 /* Determine the maximum minutes to set the X scale */
-let maxMinutes = d3.max(simsGamingObservations, function (d) { /* The simsGamingObservation, the array of data */
-    return d.minutesPlayed;/*D3 which property to check in each object */
-});
+let maxMinutes = 60
 
 /* Create Linear Scales for X and Y axes */
 //------------------Minutes playing sims4---------------------
@@ -104,10 +97,7 @@ let yScale = d3.scaleLinear()//Declares a variable called yScale.
 
 //-------------------Temperature---------------------------------
 let rScale = d3.scaleLinear()
-    .domain([
-        d3.min(simsGamingObservations, function(d) { return d.temperature; }),
-        d3.max(simsGamingObservations, function(d) { return d.temperature; })
-    ])
+    .domain([-1,16])
     .range([4, 18]);
 //I add this part of the temperature
     
@@ -128,7 +118,7 @@ circles.attr("r", function(d) {
     })
     .attr("fill", "black") 
     .attr("stroke", "black")
-    .style("opacity", 0.5)
+    .attr("opacity", 0.5)
     .attr("cx", function(d) {
         return xScale(d.minutesPlayed);
     })
