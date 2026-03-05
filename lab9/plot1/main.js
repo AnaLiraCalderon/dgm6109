@@ -79,7 +79,7 @@ let simsGamingObservations = [ /* Declares the variable of Sims4 and the stress 
 //--------------------------------------------------------
 
 function filterTimePlayed(value) {
-    return value.minutesPlayed ;
+    return value.minutesPlayed > 0;
 }
 
 let sortByStress = function (a, b) {
