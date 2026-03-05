@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 8: Scatterplot - Sims 4 vs Stress</title>
+    <script src="d3.min.js"></script>
+</head>
+
+<body>
+    <div id="container" style="margin: 0 auto">
+        <div id="canvas"></div>
+        
+        <h1 style="text-align:center">Relationship Between My Stress Level and the Temperature; Also, The Sims 4 Playtime could affects My Stresss</h1>
+        
+        <p style="text-align: left">
+            <strong>Hypothesis:</strong> I hypothesize that there is a significant inverse correlation 
+            between my final stress level and the daily temperature. Additionally, I anticipate that 
+            other factors, such as the time of day (represented by colors) and the total minutes played 
+            (represented by circle size), also influence my stress levels. I chose to focus exclusively 
+            on the days I played The Sims 4 to better understand the direct relationship between these 
+            gaming activities and my emotional well-being.
+        </p>
+
+        <p style="text-align: left">
+        <strong>Why this is one of my best plots:</strong>This is one of my best plots because it successfully 
+        integrates four different variables into a single, cohesive visualization while maintaining technical 
+        integrity. By implementing the Array.filter() method to remove "noise" from non-playing days and 
+        Array.sort() to organize the data, I ensured a clear and accurate narrative. 
+        The plot is truly multidimensional: it tracks temperature on the X-axis and stress on the Y-axis, 
+        while simultaneously using color-coding to categorize the time of day and dynamic circle areas to 
+        represent gameplay duration.
+        </p>
+
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
