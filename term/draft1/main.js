@@ -251,12 +251,11 @@ function drawVisualization(data, drawing) {
                 .attr("cx", xPos)
                 .attr("cy", gridY + (gridHeight / 3)) // VERTICAL CENTER IN THE CANVA
                 .attr("r", rScale(d["Daily temperature °C"])) // RADIO OF THE CIRCLE OF TEMPERATURE
-                .attr("fill", function() {
+                .attr("fill", function() {//https://www.geeksforgeeks.org/javascript/javascript-anonymous-functions/
                     // FUNTION OF COLOR FOR TEMPERATURE
-                    let temp = d["Daily temperature °C"];
-                    if (temp <= 5) {
+                    if (d["Daily temperature °C"] <= 5) {
                         return "#001affff"; // BLUE
-                    } if (temp <= 10) {
+                    } if (d["Daily temperature °C"] <= 10) {
                         return "#ff8000ff"; // ORANGE
                     } else {
                         return "#ff0004ff"; //RED
@@ -266,18 +265,17 @@ function drawVisualization(data, drawing) {
         // STRESS LEVEL AFTER PLAYING THE SIMS 4
         // I use this site for the emojis: https://stackoverflow.com/questions/18416749/adding-fontawesome-icons-to-a-d3-graph
 
-            let stressVal = d["My stress level after playing The Sims 4 level 😌 0-1 = 😐 Relax 2-3 = 😵 Tense 4-5= Very Stressed"];
 
             drawing.append("text")
                 .attr("x", xPos)
                 .attr("y", gridY + (gridHeight / 3) + 7) // +7 FOR CENTER THE EMOGY
                 .attr("text-anchor", "middle")
                 .attr("font-size", "22px")
-                .text(function() {
+                .text(function() {//https://www.geeksforgeeks.org/javascript/javascript-anonymous-functions/
                     // IF AND RETURN LOGIC
-                    if (stressVal <= 1) {
+                    if (d["My stress level after playing The Sims 4 level 😌 0-1 = 😐 Relax 2-3 = 😵 Tense 4-5= Very Stressed"] <= 1) {
                         return "😌"; 
-                    } if (stressVal <= 3) {
+                    } if (d["My stress level after playing The Sims 4 level 😌 0-1 = 😐 Relax 2-3 = 😵 Tense 4-5= Very Stressed"] <= 3) {
                         return "😐"; 
                     } else {
                         return "😵"; 
