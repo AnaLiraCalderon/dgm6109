@@ -519,3 +519,22 @@ stressLevelAfter.append("text")
     .style("font-family", "sans-serif")
     .text("4-5 (Very Stressed)");
     
+//---------------- Minutes ---------------------
+
+let minutes = svg.append("g")
+.attr("transform", "translate(750, 80)"); 
+minutes.append("text")
+    .attr("x", -600)
+    .attr("y", 290)
+    .style("font-size", "12px")
+        .style("font-weight", "bold")
+    .style("font-family", "sans-serif")
+    .text("Minutes:");
+
+minutes.append("text")
+    .attr("x", -600)
+    .attr("y", 250)
+    .style("font-size", "12px")
+        .style("font-weight", "bold")
+    .style("font-family", "sans-serif")
+    .text("Day:");
