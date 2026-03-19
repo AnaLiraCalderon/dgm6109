@@ -400,7 +400,7 @@ temperature.append("text")
     .attr("y", 35)
     .style("font-size", "12px")
     .style("font-family", "sans-serif")
-    .text("Cold Days (>=-1°C).");
+    .text("Cold Days (<=-1°C).");
 
 temperature.append("circle")
     .attr("r", 8)
@@ -415,7 +415,7 @@ temperature.append("text")
     .attr("y", 65)
     .style("font-size", "12px")
     .style("font-family", "sans-serif")
-    .text("Moderate (=<10°C).");
+    .text("Moderate (<=10°C).");
 
 temperature.append("circle")
     .attr("r", 8)
@@ -430,7 +430,7 @@ temperature.append("text")
     .attr("y", 95)
     .style("font-size", "12px")
     .style("font-family", "sans-serif")
-    .text("Hot Days (=<16°C).");
+    .text("Hot Days (<=16°C).");
 
 temperature.append("circle")
     .attr("r", 8)
