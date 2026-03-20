@@ -224,7 +224,7 @@ function drawVisualization(data, drawing) {
                 .attr("font-family", "sans-serif")
                 .attr("font-size", "12px")
                 .attr("font-weight", "bold")
-                .text(d.day);
+                .text(d["day"]);
 
         //MINUTES
             drawing.append("text")
@@ -313,8 +313,8 @@ timeOfDay.append("rect")
     .attr("width", 230)
     .attr("height", 160)
     .attr("fill", "none")
-    .attr("stroke", "#020202ff") // Color gris claro para el borde
-    .attr("rx", 5); // Bordes redondeados opcionales
+    .attr("stroke", "#020202ff") 
+    .attr("rx", 5); 
 
 timeOfDay.append("line")
     .attr("x1", -10)
