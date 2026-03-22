@@ -1,0 +1,20 @@
+.axisLabel {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.axis { /* used by d3.js when creating an axis */
+    font-size: 16pt;
+}
+
+.legend {
+    font-size: 12px;
+}
+
+body {
+    max-width: 800px;
+    padding: 20px;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
