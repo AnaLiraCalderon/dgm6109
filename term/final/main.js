@@ -133,14 +133,13 @@ layout for the final visualization. */
     data.forEach(function (d, i) {//.forEach: A loop that instructs the computer to process every element in the array one by one.
         //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#:~:text=The%20forEach()%20method%20is,js%20Copy
         // Calculate which row (week) and column (day) this entry belongs to
-        let col = i % daysPerRow; // 0–6 within the week
-        let row = Math.floor(i / daysPerRow); // 0 = week 1, 1 = week 2, etc.
+        let col = i % daysPerRow;
+        let row = Math.floor(i / daysPerRow);
 
         let xPos = gridX + (col * 135); 
-        let yBase = gridY + (row * rowSpacing); // Shift down for each new week
+        let yBase = gridY + (row * rowSpacing);
 
-        // Draw the grid lines once per row at the start of each week
-        if (col == 0) {//horizontal
+        if (col == 0) {
             // Top horizontal line
             drawing.append("line")
                 .attr("x1", gridX - 100)
@@ -160,7 +159,7 @@ layout for the final visualization. */
         }
 
         // Vertical line for each column
-        if (col != 6) { // Avoid drawing the last line of the line to keep the grid with the same aesthetic//vertical
+        if (col != 6) { 
             drawing.append("line")
                 .attr("x1", xPos)
                 .attr("y1", yBase)
@@ -171,7 +170,7 @@ layout for the final visualization. */
         }
         // DAY label
         drawing.append("text")
-            .attr("x", xPos - 65) // Move left to the center of the box
+            .attr("x", xPos - 65) 
             .attr("y", yBase - 50)
             .attr("text-anchor", "middle")
             .attr("font-family", "sans-serif")
