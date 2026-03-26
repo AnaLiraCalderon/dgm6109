@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Emojis Stress Calendar</title>
+    <script src="d3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+
+    <div id="canvas"></div>
+
+    <h1>Data Visualization Analysis: The Emojis Stress Calendar</h1>
+
+    <p><strong>HYPOTHESIS:</strong>"As my daily time playing The Sims 4 (which is my favorite video game) increases my
+        stress decreases. One other factor
+        that could impact my stress is the temperature of the day."</p>
+
+    <p>Can external factors such as playing The Sims 4 (which is my favorite video game) and daily temperature
+        effectively reduce my stress levels?</p>
+
+    <p>Based on the visualization, the data reveals an interesting pattern: playing
+        The Sims 4 is most effective at reducing stress on <strong>Cold Days</strong>
+        , where even moderate play sessions tend to result in a relaxed or tense emoji outcome.
+        On <strong>Hot Days</strong>however, stress levels remain higher regardless of playtime, suggesting that high
+        temperatures may counteract the relaxing benefits of the game.</p>
+
+    <p><strong>EXPLANATION:</strong> The visualization is structured as a calendar grid,
+        where each entry represents one day of observation. At the center of each daily record,
+        a colored circle indicates the temperature of that day, as shown in the
+        <strong>Temperature</strong> legend: <strong>blue</strong> for Cold Days (<=5°C), <strong>orange</strong> for
+            Moderate days (>5°C and <=10°C), and <strong>red</strong> for Hot Days (>10°C). Inside each circle, a
+                specific emoji represents the resulting stress level after playing The Sims 4, as shown in the
+                <strong>Stress Level After</strong> legend: <strong>😌</strong> for Relaxed (0-1), <strong>😐</strong>
+                for Tense (2-3), and <strong>😵</strong> for Very Stressed (4-5).
+    </p>
+
+    <p>Two additional data layers provide further context. At the top of each entry, the
+        <strong>playtime duration in minutes and the date</strong> shows how long The Sims 4 was played
+        that day. At the bottom, the <strong>Time of Day</strong> legend categorizes each
+        session as Morning (10:00 a.m. - 12:00 p.m.), Afternoon (12:00 p.m. - 5:00 p.m.),
+        Evening (5:00 p.m. - 8:00 p.m.), or <strong>None</strong> for days when The Sims 4
+        was not played.
+    </p>
+
+    <p><strong>CONCLUSION:</strong> In conclusion, the data supports the hypothesis.
+        The visualization shows that the most effective stress reduction occurs when
+        The Sims 4 is played for longer sessions (40-60 minutes) on Cold Days (<=5°C) during the Evening. For example,
+            on <strong>January 30</strong>, playing 60 minutes in the Evening at 9°C reduced stress from 3 to 1 (😐 to
+            😌), and on <strong>February 10</strong>, a 32-minute Evening session at 3°C dropped stress from 1 to 0
+            (😌). This combination consistently produced the most relaxed emoji outcomes (😌 0-1), confirming that both
+            playtime
+            duration and temperature are key factors in stress regulation.</p>
+
+    <p>On the other hand, short sessions (0-30 minutes) on Hot Days (>10°C) showed
+        the highest stress levels (😵 4-5), suggesting that high temperatures reduce the
+        effectiveness of The Sims 4 as a stress relief tool. One notable exception is <strong>February 4</strong>, where
+        stress was 0 (😌) despite no playtime. However, this was the hottest day in the dataset at 16°C, suggesting
+        that on naturally low-stress days, temperature alone may have been the dominant factor. Moderate temperature
+        days (>5°C and <=10°C) showed mixed results, where playtime duration became the deciding factor between a
+            relaxed or tense outcome. Overall, the data confirms that increasing daily playtime is the strongest
+            predictor of stress reduction, with temperature acting as a secondary but significant influence.</p>
+
+            <div class="download-section">
+                <p>For more details on the research and methodology, you can download the full report below:</p>
+                <a href="report.pdf" id="download-btn">
+                    Download Report (PDF)
+                </a>
+            </div>
+
+</body>
+
+<script src="main.js"></script>
+
+</html>

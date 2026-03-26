@@ -1,0 +1,36 @@
+.axisLabel {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.axis { 
+    font-size: 16pt;
+}
+
+.legend {
+    font-size: 12px;
+}
+
+body {
+    max-width: 800px;
+    padding: 20px;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.download-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+#download-btn {
+    display: inline-block;
+    background-color: #ff0000; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
